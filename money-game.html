@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+    <title>The money game</title>
+
+    <style>
+
+      h1.header {
+        color: plum;
+      }
+
+      img.note {
+        height: 25%;
+        width: 25%;
+      }
+      
+    
+    </style>
+
+  </head>
+ <body>
+    <h1 class="header">The money game</h1>
+
+
+    <img class="note" src="rs50.jpg">
+
+    <p>
+    1. You have rupees 50
+    2. To win you need 100 rupees
+    3. To lose you need 0 rupees
+    4. Choose between button X, button Y and button Z
+    5. One button halves (e.g- 5O becomes 25)
+    6. The other minuses 5 rupees (e.g- 5O becomes 45)
+    7. The other increases your amount by the amount of money you
+      have (e.g- 5O becomes 100)
+    </p>
+    <button> X </button>
+    <button> Y </button>
+    <button> Z </button>
+
+<script>
+  var value=50
+  value=value-5
+  value=value*2
+  value=value/2
+
+  if (value >=100) console.log('You win!🎊')
+  if (value <=0) console.log('You lose!😒')
+</script>
+
+</body>
+</html>
+
