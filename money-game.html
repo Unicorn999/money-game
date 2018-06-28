@@ -2,51 +2,38 @@
  <html>
  <head>
     <title>The money game</title>
-
-    <style>
-
-      h1.header {
-        color: plum;
-      }
-
-      img.note {
-        height: 25%;
-        width: 25%;
-      }
-      
-    
-    </style>
-
+    <link rel="stylesheet" href="bootstrap.4.1.0.min.css">
+    <link rel="stylesheet" href="money-game.css">
   </head>
  <body>
-    <h1 class="header">The money game</h1>
+    <h1 class="pinkie">The money game</h1>
+    <h2 class="pinkie">Rules</h2>
+    <ol>
+    <li>You have rupees 50 </li>
+    <li> To win you need 100 rupees </li>
+    <li>To lose you need 0 rupees </li>
+    <li> Choose between button X, button Y and button Z </li>
+    <li>One button halves (e.g- 5O becomes 25)</li>
+    <li>The other minuses 5 rupees (e.g- 5O becomes 45)</li>
+    <li>The other increases your amount by the amount of money you
+      have (e.g- 5O becomes 100)</li>
+    </ol>
 
+    <!-- 
+      hey i am going to use this in future
+      but my aim is to get the logic right first,
+      hence, Mr Note: please wait
+      <img class="note" src="rs50.jpg">
+    -->
 
-    <img class="note" src="rs50.jpg">
+    <p>You have: <span id="moneyLeft" class="pinkie">50</span> Rs</p>
 
-    <p>
-    1. You have rupees 50
-    2. To win you need 100 rupees
-    3. To lose you need 0 rupees
-    4. Choose between button X, button Y and button Z
-    5. One button halves (e.g- 5O becomes 25)
-    6. The other minuses 5 rupees (e.g- 5O becomes 45)
-    7. The other increases your amount by the amount of money you
-      have (e.g- 5O becomes 100)
-    </p>
-    <button> X </button>
-    <button> Y </button>
-    <button> Z </button>
+    <button onclick="xClick()"> X </button>
+    <button onclick="yClick()"> Y </button>
+    <button onclick="zClick()"> Z </button>
 
-<script>
-  var value=50
-  value=value-5
-  value=value*2
-  value=value/2
-
-  if (value >=100) console.log('You win!🎊')
-  if (value <=0) console.log('You lose!😒')
-</script>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="money-game.js"></script>
 
 </body>
 </html>
